@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ARtemis | Augmented Reality Works</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+    <script>
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}</script>
+
+<script>
+function DetectAndServe(){
+
+if (getMobileOperatingSystem() == "Android") {
+    window.location.href = "https://play.google.com/store/apps/details?id=com.artemisworks.snakear"; 
+    }
+if (getMobileOperatingSystem() == "iOS") {
+    window.location.href = "https://itunes.apple.com/app/snake-ar/id1412559766?mt=8";
+    }
+if (getMobileOperatingSystem() == "unknown") {
+  window.location.href = "http://artemisworks.net/snake_AR.html";}
+};
+</script>
+
+    </head>
+    <body onload="DetectAndServe()">
+    </body>
+</html>
